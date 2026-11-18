@@ -11,10 +11,16 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 // Links de WhatsApp
 const waLink = (msg) => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
+
+// Meta Pixel: dispara evento se o pixel carregou (bloqueadores não quebram o site)
+const track = (ev, params) => { try { window.fbq && fbq("track", ev, params); } catch (e) {} };
+const currentAud = () => (document.querySelector('[data-set-aud][aria-selected="true"]')?.dataset.setAud === "info" ? "infoproduto" : "negocio_local");
 document.querySelectorAll(".js-whatsapp").forEach((a) => {
   a.href = waLink(a.dataset.msg || "Olá! Vim pelo site da Spectus.");
   a.target = "_blank";
   a.rel = "noopener";
+  // Clique em qualquer botão de WhatsApp = Contact
+  a.addEventListener("click", () => track("Contact", { content_name: a.classList.contains("sticky-cta") ? "whatsapp_fixo" : "whatsapp", content_category: currentAud() }));
 });
 
 // Seletor de público (negócio local × infoproduto)
@@ -89,7 +95,10 @@ function setAudience(aud, { updateUrl = false } = {}) {
   }
 }
 document.querySelectorAll("[data-set-aud]").forEach((b) =>
-  b.addEventListener("click", () => setAudience(b.dataset.setAud, { updateUrl: true }))
+  b.addEventListener("click", () => {
+    setAudience(b.dataset.setAud, { updateUrl: true });
+    try { window.fbq && fbq("trackCustom", "TrocouPublico", { publico: currentAud() }); } catch (e) {}
+  })
 );
 const param = new URLSearchParams(location.search).get("para") || "";
 setAudience(/^info/i.test(param) ? "info" : "local");
@@ -203,6 +212,8 @@ form.addEventListener("submit", (ev) => {
     `Contato: ${data.get("contact").trim()}\n` +
     `Preciso de: ${data.get("need")}`;
 
+  // Formulário enviado = Lead
+  track("Lead", { content_name: "formulario_diagnostico", content_category: data.get("need") });
   window.open(waLink(msg), "_blank", "noopener");
 });
 
