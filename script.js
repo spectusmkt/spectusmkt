@@ -96,6 +96,48 @@ document.querySelectorAll(".js-zoom").forEach((btn) =>
 lightbox.querySelector(".lightbox__close").addEventListener("click", () => lightbox.close());
 lightbox.addEventListener("click", (e) => { if (e.target === lightbox) lightbox.close(); });
 
+// Carrossel de depoimentos
+document.querySelectorAll(".carousel").forEach((car) => {
+  const track = car.querySelector(".carousel__track");
+  const [prev, next] = car.querySelectorAll(".carousel__btn");
+  const step = () => (track.querySelector(".slide")?.offsetWidth || 300) + 18;
+  prev.addEventListener("click", () => track.scrollBy({ left: -step(), behavior: "smooth" }));
+  next.addEventListener("click", () => track.scrollBy({ left: step(), behavior: "smooth" }));
+  const update = () => {
+    prev.disabled = track.scrollLeft < 8;
+    next.disabled = track.scrollLeft + track.clientWidth > track.scrollWidth - 8;
+  };
+  track.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update);
+  update();
+});
+
+// Números que sobem ao aparecer na tela
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const counters = document.querySelectorAll(".stat dd, .case__metrics strong");
+const countUp = (el) => {
+  const original = el.textContent;
+  const m = original.match(/\d[\d.]*(,\d+)?/);
+  if (!m) return;
+  const decimals = m[1] ? m[1].length - 1 : 0;
+  const target = parseFloat(m[0].replace(/\./g, "").replace(",", "."));
+  const [before, after] = [original.slice(0, m.index), original.slice(m.index + m[0].length)];
+  const fmt = (v) => v.toLocaleString("pt-BR", { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
+  const dur = 1600, t0 = performance.now();
+  const tick = (now) => {
+    const p = Math.min(1, (now - t0) / dur), eased = 1 - Math.pow(1 - p, 3);
+    el.textContent = before + fmt(target * eased) + after;
+    if (p < 1) requestAnimationFrame(tick); else el.textContent = original;
+  };
+  requestAnimationFrame(tick);
+};
+if (!reduceMotion) {
+  const cio = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { countUp(e.target); cio.unobserve(e.target); } });
+  }, { threshold: 0.6 });
+  counters.forEach((el) => cio.observe(el));
+}
+
 // Formulário → mensagem pronta no WhatsApp
 const form = document.getElementById("lead-form");
 const errorEl = form.querySelector(".form__error");
