@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spectus — Marketing para negócios locais e infoprodutos</title>
+  <meta name="description" content="Agência especialista em negócios locais e infoprodutos: tráfego pago, Google Meu Negócio, copy, vídeos, landing pages e co-produção. Solicite um diagnóstico gratuito.">
+  <meta property="og:title" content="Spectus — Marketing para negócios locais e infoprodutos">
+  <meta property="og:description" content="Tráfego pago, Google Meu Negócio, copy, vídeos e landing pages num só time. Diagnóstico gratuito.">
+  <meta name="theme-color" content="#121D3F">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/logo-icone.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER (sem menu: foco total no CTA) ============ -->
+<header class="header" id="top">
+  <div class="container header__inner">
+    <a href="#top" class="logo" aria-label="Spectus — início">
+      <img src="assets/img/logo-claro-sem-slogan.png" alt="Spectus" width="514" height="120">
+    </a>
+    <a href="#contato" class="btn btn--sm btn--primary">Diagnóstico gratuito</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ 1. HERO ============ -->
+<section class="hero">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="container hero__grid">
+    <div class="hero__copy">
+      <!-- Seletor de público. Link direto: ?para=local ou ?para=infoproduto -->
+      <div class="aud-switch" role="tablist" aria-label="Qual é o seu negócio?">
+        <span class="aud-switch__label">Seu negócio é:</span>
+        <button type="button" role="tab" class="aud-switch__btn" data-set-aud="local" aria-selected="true">Negócio local</button>
+        <button type="button" role="tab" class="aud-switch__btn" data-set-aud="info" aria-selected="false">Infoproduto</button>
+      </div>
+
+      <div data-aud="local">
+        <h1>Seja encontrado por quem está <em>perto</em> e pronto para comprar.</h1>
+        <p class="lead">Colocamos sua empresa no topo do Google e nos anúncios da sua região, para o seu WhatsApp receber novos clientes todos os dias.</p>
+      </div>
+      <div data-aud="info" hidden>
+        <h1>Mais vendas no seu infoproduto, com um funil que <em>converte</em>.</h1>
+        <p class="lead">Página de vendas, copy, criativos e tráfego feitos pelo mesmo time e ajustados toda semana pelos números. Se fizer sentido, entramos como co-produtores.</p>
+      </div>
+
+      <div class="hero__ctas">
+        <a href="#contato" class="btn btn--primary btn--lg">Solicitar diagnóstico gratuito <span aria-hidden="true">→</span></a>
+        <a href="#" class="btn btn--ghost btn--lg js-whatsapp js-wa-hero" data-msg="Olá! Vim pelo site e quero saber mais sobre os serviços da Spectus.">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+          Falar no WhatsApp
+        </a>
+      </div>
+      <ul class="hero__trust">
+        <li>Diagnóstico de 30 min sem custo</li>
+        <li>Contas de anúncio no seu nome</li>
+        <li>Atendimento direto com o gestor</li>
+      </ul>
+    </div>
+
+    <div class="hero__media">
+      <!-- TROCAR: foto ou vídeo real da equipe / do trabalho. Ex.: <img src="assets/img/hero.jpg" alt="Equipe Spectus analisando campanhas"> -->
+      <div class="slot slot--hero" data-placeholder="Foto ou vídeo real da equipe (vertical 4:5)">
+        <span class="slot__label">Foto/vídeo da equipe</span>
+      </div>
+      <div class="float-card float-card--a">
+        <span class="float-card__k">Atuação</span>
+        <span class="float-card__v">🇧🇷 🇵🇹 🇺🇸 🇦🇪</span>
+      </div>
+      <div class="float-card float-card--b" data-aud="local">
+        <span class="float-card__k">Isa Tacla · estúdio de tatuagem</span>
+        <span class="float-card__v">“A agenda dessa semana está cheia”</span>
+      </div>
+      <div class="float-card float-card--b" data-aud="info" hidden>
+        <span class="float-card__k">Resultado real · infoproduto</span>
+        <span class="float-card__v">R$ 159 mil faturados em 1 mês</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. DOR E SOLUÇÃO ============ -->
+<section class="section pain">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="kicker">O problema</p>
+      <h2>Você investe no digital e não sabe o que está voltando?</h2>
+    </div>
+
+    <div class="pain__grid">
+      <ul class="pain__list reveal">
+        <li><span class="x" aria-hidden="true">✕</span><div><strong>Seu negócio não aparece no Google.</strong> Alguém procura pelo seu serviço na sua região e encontra o concorrente.</div></li>
+        <li><span class="x" aria-hidden="true">✕</span><div><strong>Impulsiona post e nada acontece.</strong> Aparecem curtidas, mas o WhatsApp continua parado e o checkout vazio.</div></li>
+        <li><span class="x" aria-hidden="true">✕</span><div><strong>Tráfego caro, página que não converte.</strong> O anúncio leva gente, mas a página e a copy não vendem.</div></li>
+        <li><span class="x" aria-hidden="true">✕</span><div><strong>Um fornecedor para cada coisa.</strong> Designer, editor e gestor que não conversam, e você no meio tentando juntar tudo.</div></li>
+      </ul>
+
+      <div class="solution reveal">
+        <p class="kicker kicker--accent">A solução Spectus</p>
+        <h3>Um só time cuidando de tudo, do anúncio à venda.</h3>
+        <p>Anúncio, vídeo, copy, página e perfil no Google feitos pelo mesmo time, com a mesma meta. Tudo começa com um diagnóstico do seu negócio, é medido do clique até a venda e ajustado toda semana para o dinheiro ir para o que funciona.</p>
+        <ul class="checks">
+          <li>Meta de resultado definida antes de investir</li>
+          <li>Criativos, copy e página alinhados à campanha</li>
+          <li>Otimização semanal com base em dados reais</li>
+        </ul>
+        <a href="#contato" class="btn btn--primary">Quero meu diagnóstico <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2b. PARA QUEM / SERVIÇOS ============ -->
+<section class="section services" id="servicos">
+  <div class="container">
+    <div class="section__head section__head--center reveal">
+      <p class="kicker">Para quem</p>
+      <h2>Dois tipos de negócio. Um time especialista em cada um.</h2>
+    </div>
+
+    <div class="audiences">
+      <article class="audience reveal">
+        <span class="audience__tag">Negócios locais</span>
+        <h3>Clínicas, lojas, restaurantes, escritórios e prestadores de serviço.</h3>
+        <p>Fazemos o seu negócio ser encontrado por quem está perto e pronto para comprar: perfil no Google otimizado, anúncios na sua região e WhatsApp recebendo contatos todos os dias.</p>
+      </article>
+      <article class="audience audience--alt reveal">
+        <span class="audience__tag">Infoprodutos</span>
+        <h3>Experts, mentores e criadores de cursos e comunidades.</h3>
+        <p>Estruturamos o funil completo, da página de vendas ao tráfego, e podemos entrar como co-produtores, crescendo junto com o seu produto.</p>
+      </article>
+    </div>
+
+    <ul class="services__grid">
+      <li class="service reveal"><span class="service__i" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg></span><div><h3>Tráfego pago</h3><p>Meta Ads e Google Ads com meta de custo por cliente.</p></div></li>
+      <li class="service reveal"><span class="service__i" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div><h3>Google Meu Negócio</h3><p>Perfil otimizado para aparecer nas buscas e no mapa.</p></div></li>
+      <li class="service reveal"><span class="service__i" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16Z"/><path d="m13 7 4 4"/></svg></span><div><h3>Copy</h3><p>Textos de anúncio, páginas e posts que levam à ação.</p></div></li>
+      <li class="service reveal"><span class="service__i" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg></span><div><h3>Landing pages e sites</h3><p>Páginas rápidas, feitas para converter visita em contato.</p></div></li>
+      <li class="service reveal"><span class="service__i" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3"/></svg></span><div><h3>Edição de vídeos</h3><p>Criativos e reels editados para prender a atenção.</p></div></li>
+      <li class="service reveal"><span class="service__i" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="4"/><circle cx="12" cy="12" r="3.5"/><path d="M16.5 7h.01"/></svg></span><div><h3>Consultoria de mídias sociais</h3><p>Posicionamento, linha editorial e perfil que vende.</p></div></li>
+      <li class="service reveal"><span class="service__i" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span><div><h3>Consultoria de marketing digital</h3><p>Plano estratégico para o seu digital crescer com método.</p></div></li>
+      <li class="service reveal"><span class="service__i" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM16 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM2 20a6 6 0 0 1 12 0M10 20a6 6 0 0 1 12 0"/></svg></span><div><h3>Co-produção em infoprodutos</h3><p>Sócios na operação: estratégia, tráfego e lançamento.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ 3. COMO FUNCIONA ============ -->
+<section class="section steps" id="como-funciona">
+  <div class="container">
+    <div class="section__head section__head--center reveal">
+      <p class="kicker">Como funciona</p>
+      <h2>Do primeiro contato às campanhas no ar, em 4 etapas.</h2>
+      <p class="section__sub">Você sabe exatamente o que acontece em cada fase, e nada vai ao ar sem a sua aprovação.</p>
+    </div>
+
+    <ol class="steps__list">
+      <li class="step reveal">
+        <span class="step__n">01</span>
+        <h3>Diagnóstico</h3>
+        <p>Uma conversa de 30 minutos, sem custo. Analisamos seu negócio, sua oferta, suas contas atuais e seus concorrentes.</p>
+      </li>
+      <li class="step reveal">
+        <span class="step__n">02</span>
+        <h3>Estratégia</h3>
+        <p>Você recebe um plano com públicos, canais, criativos, verba recomendada e a meta de custo por resultado.</p>
+      </li>
+      <li class="step reveal">
+        <span class="step__n">03</span>
+        <h3>Execução</h3>
+        <p>Produzimos copy, vídeos e páginas, configuramos o rastreamento e colocamos as campanhas no ar com a sua aprovação.</p>
+      </li>
+      <li class="step reveal">
+        <span class="step__n">04</span>
+        <h3>Acompanhamento</h3>
+        <p>Otimizamos toda semana, enviamos relatórios em linguagem simples e fazemos uma reunião mensal de resultados.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ 4. BENEFÍCIOS E DIFERENCIAIS ============ -->
+<section class="section benefits">
+  <div class="container">
+    <div class="section__head reveal">
+      <p class="kicker">Por que a Spectus</p>
+      <h2>O que muda no seu negócio quando o tráfego é bem feito.</h2>
+    </div>
+
+    <div class="bento">
+      <article class="card card--wide reveal">
+        <div class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Decisão por dados, não por achismo</h3>
+        <p>Cada real é acompanhado do anúncio até a venda. Você sabe quanto custa trazer um cliente e quanto ele devolve.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Campanhas no ar rápido</h3>
+        <p>Depois da aprovação da estratégia, as campanhas começam a rodar em poucos dias.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Contas no seu nome</h3>
+        <p>As contas de anúncio, o pixel e os dados são seus. Se um dia sair, leva tudo junto.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Atendimento direto</h3>
+        <p>Você fala com quem gerencia suas campanhas, pelo WhatsApp. Sem intermediários.</p>
+      </article>
+      <article class="card reveal">
+        <div class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M5 4h14v16H5zM9 9h6M9 13h6M9 17h3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Tudo num só lugar</h3>
+        <p>Anúncio, vídeo, copy e página feitos pelo mesmo time. Sem desencontro entre fornecedores.</p>
+      </article>
+      <article class="card card--wide card--globe reveal">
+        <div class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <h3>Experiência em 4 mercados</h3>
+        <p>Campanhas para negócios no Brasil, em Portugal, nos Estados Unidos e nos Emirados Árabes, inclusive para quem atende brasileiros fora do país.</p>
+        <div class="flags" aria-hidden="true"><span>🇧🇷</span><span>🇵🇹</span><span>🇺🇸</span><span>🇦🇪</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. PROVA SOCIAL E AUTORIDADE ============ -->
+<section class="section proof" id="resultados">
+  <div class="container">
+    <div class="section__head section__head--center reveal">
+      <p class="kicker">Resultados reais</p>
+      <h2>Números de quem já anuncia com a Spectus.</h2>
+      <p class="section__sub">Prints direto do painel dos clientes. Os nomes dos produtos foram ocultados para preservar os clientes.</p>
+    </div>
+
+    <!-- Números de autoridade -->
+    <dl class="stats reveal">
+      <div class="stat"><dt>de experiência em tráfego pago</dt><dd>3 anos</dd></div>
+      <div class="stat"><dt>gerenciados em anúncios</dt><dd>+R$ 5 mi</dd></div>
+      <div class="stat"><dt>com clientes atendidos</dt><dd>4 países</dd></div>
+    </dl>
+
+    <!-- Estudos de caso (prints com nome do produto ocultado) -->
+    <div class="cases">
+      <article class="case reveal">
+        <button type="button" class="case__shot js-zoom" data-src="assets/img/case-vsl.webp" aria-label="Ampliar print do resultado">
+          <img src="assets/img/case-vsl.webp" alt="Painel de vendas: ROAS 2,75x, R$ 159.405,48 faturados e 670 vendas em outubro" loading="lazy" width="2000" height="741">
+          <span class="case__zoom" aria-hidden="true">Ampliar</span>
+        </button>
+        <div class="case__body">
+          <p class="case__tag">Infoproduto · funil de VSL</p>
+          <h3>R$ 159 mil faturados em um único mês</h3>
+          <div class="case__metrics">
+            <div><strong>670</strong><span>vendas no mês</span></div>
+            <div><strong>2,75x</strong><span>ROAS (meta era 2x)</span></div>
+          </div>
+          <p class="case__text">R$ 58 mil investidos em tráfego viraram R$ 101 mil de lucro em outubro de 2026.</p>
+        </div>
+      </article>
+      <article class="case reveal">
+        <button type="button" class="case__shot js-zoom" data-src="assets/img/case-lowticket.webp" aria-label="Ampliar print do resultado">
+          <img src="assets/img/case-lowticket.webp" alt="Painel de vendas: ROAS 2,92x, R$ 195.375,84 faturados e 2.487 vendas no ano" loading="lazy" width="2000" height="754">
+          <span class="case__zoom" aria-hidden="true">Ampliar</span>
+        </button>
+        <div class="case__body">
+          <p class="case__tag">Infoproduto · low ticket com upsell</p>
+          <h3>R$ 195 mil em vendas de um produto de entrada</h3>
+          <div class="case__metrics">
+            <div><strong>2.487</strong><span>vendas em 2026</span></div>
+            <div><strong>2,92x</strong><span>ROAS</span></div>
+          </div>
+          <p class="case__text">Ticket médio de R$ 78 e R$ 128 mil de lucro de janeiro a novembro, com escala constante.</p>
+        </div>
+      </article>
+      <article class="case reveal">
+        <button type="button" class="case__shot js-zoom" data-src="assets/img/case-black.webp" aria-label="Ampliar print do resultado">
+          <img style="object-position:right bottom" src="assets/img/case-black.webp" alt="Gerenciador de anúncios: R$ 11.830,02 investidos e R$ 42.848,48 em compras, ROAS 3,62" loading="lazy" width="1432" height="458">
+          <span class="case__zoom" aria-hidden="true">Ampliar</span>
+        </button>
+        <div class="case__body">
+          <p class="case__tag">Campanha de Black Friday</p>
+          <h3>R$ 42,8 mil em vendas com R$ 11,8 mil de anúncio</h3>
+          <div class="case__metrics">
+            <div><strong>3,62x</strong><span>ROAS</span></div>
+            <div><strong>+R$ 31 mil</strong><span>acima do investido</span></div>
+          </div>
+          <p class="case__text">Campanha sazonal de vendas no Meta Ads, com dados do próprio gerenciador de anúncios.</p>
+        </div>
+      </article>
+    </div>
+
+    <!-- Depoimento em destaque -->
+    <figure class="featured reveal">
+      <blockquote>
+        <p>“Já no primeiro mês a gente teve um crescimento bem expressivo nas vendas dos produtos e serviços aqui.”</p>
+        <p>“O valor que a gente coloca em tráfego está voltando <mark>3 a 4 vezes mais</mark>, gerando um lucro excelente pra empresa.”</p>
+      </blockquote>
+      <figcaption>
+        <span class="avatar" aria-hidden="true">PB</span>
+        <span><strong>Paulo Braga</strong><small>Cliente Spectus · 3 negócios atendidos</small></span>
+        <button type="button" class="btn btn--ghost btn--sm js-zoom" data-src="assets/img/dep-paulo-1.webp" data-src2="assets/img/dep-paulo-2.webp">Ver mensagem completa</button>
+      </figcaption>
+    </figure>
+
+    <!-- Mural de prints do WhatsApp -->
+    <div class="wall">
+      <p class="wall__title reveal">Direto do WhatsApp</p>
+      <div class="wall__grid">
+        <figure class="print reveal">
+          <button type="button" class="js-zoom" data-src="assets/img/dep-isa-resultados.webp"><img src="assets/img/dep-isa-resultados.webp" alt="Mensagem da Isa Tacla: Tô feliz demais com os resultados que estamos tendo" loading="lazy" width="482" height="327"></button>
+          <figcaption><strong>Isa Tacla</strong> · estúdio de tatuagem</figcaption>
+        </figure>
+        <figure class="print reveal">
+          <button type="button" class="js-zoom" data-src="assets/img/dep-larissa.webp"><img src="assets/img/dep-larissa.webp" alt="Mensagem da Larissa Muse: tá uma loucura esse telefone, já estou no segundo cliente do anúncio" loading="lazy" width="862" height="334"></button>
+          <figcaption><strong>Larissa Muse</strong> · bodywork em Dubai 🇦🇪</figcaption>
+        </figure>
+        <figure class="print reveal">
+          <button type="button" class="js-zoom" data-src="assets/img/dep-fabricados.webp"><img src="assets/img/dep-fabricados.webp" alt="Mensagem de cliente: 1.020 fabricados e vendidos" loading="lazy" width="382" height="376"></button>
+          <figcaption><strong>1.020 unidades vendidas</strong> · cliente com produção própria</figcaption>
+        </figure>
+        <figure class="print reveal">
+          <button type="button" class="js-zoom" data-src="assets/img/dep-isa-agenda.webp"><img src="assets/img/dep-isa-agenda.webp" alt="Mensagem da Isa Tacla: a agenda dessa semana está cheia" loading="lazy" width="382" height="276"></button>
+          <figcaption><strong>Isa Tacla</strong> · agenda cheia na semana</figcaption>
+        </figure>
+        <figure class="print reveal">
+          <button type="button" class="js-zoom" data-src="assets/img/dep-wesley.webp"><img src="assets/img/dep-wesley.webp" alt="Mensagem do Wesley Schroeder: os criativos que você editou ficaram top" loading="lazy" width="482" height="325"></button>
+          <figcaption><strong>Wesley Schroeder</strong> · edição de criativos</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- Clientes: infoprodutores com foto, negócios locais com logo (imagens em assets/img/clientes, 240x240) -->
+    <div class="clients reveal">
+      <p class="clients__title">Quem confia na Spectus</p>
+      <div class="clients__groups">
+        <div class="clients__group">
+          <span class="clients__label">Infoprodutores</span>
+          <ul>
+            <li class="client"><span class="client__img"><img src="assets/img/clientes/bianca-ribeiro.webp" alt="Bianca Ribeiro" width="240" height="240" loading="lazy"></span><span class="client__name">Bianca Ribeiro</span></li>
+            <li class="client"><span class="client__img"><img src="assets/img/clientes/cintya-soares.webp" alt="Cintya Soares" width="240" height="240" loading="lazy"></span><span class="client__name">Cintya Soares</span></li>
+            <li class="client"><span class="client__img"><img src="assets/img/clientes/sirlei-benetti.webp" alt="Sirlei Benetti" width="240" height="240" loading="lazy"></span><span class="client__name">Sirlei Benetti</span></li>
+            <li class="client"><span class="client__img"><img src="assets/img/clientes/wesley-schroeder.webp" alt="Wesley Schroeder" width="240" height="240" loading="lazy"></span><span class="client__name">Wesley Schroeder</span></li>
+            <li class="client"><span class="client__img"><img src="assets/img/clientes/ibprof.webp" alt="Logo IBPROF" width="240" height="240" loading="lazy"></span><span class="client__name">IBPROF</span></li>
+          </ul>
+        </div>
+        <div class="clients__group">
+          <span class="clients__label">Negócios locais</span>
+          <ul>
+            <li class="client"><span class="client__img"><img src="assets/img/clientes/isa-tacla-tattoo.webp" alt="Isa Tacla Tattoo" width="240" height="240" loading="lazy"></span><span class="client__name">Isa Tacla Tattoo</span></li>
+            <li class="client"><span class="client__img"><img src="assets/img/clientes/areias-do-pero.webp" alt="Logo Areias do Peró" width="240" height="240" loading="lazy"></span><span class="client__name">Areias do Peró</span></li>
+            <li class="client"><span class="client__img"><img src="assets/img/clientes/coonecta.webp" alt="Logo Coonecta" width="240" height="240" loading="lazy"></span><span class="client__name">Coonecta</span></li>
+            <li class="client"><span class="client__img"><img src="assets/img/clientes/dance-academy.webp" alt="Logo Dance Academy" width="240" height="240" loading="lazy"></span><span class="client__name">Dance Academy</span></li>
+            <li class="client"><span class="client__img"><img src="assets/img/clientes/latvet.webp" alt="Logo LatVet" width="240" height="240" loading="lazy"></span><span class="client__name">LatVet</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. CTA FINAL E CAPTURA ============ -->
+<section class="section final" id="contato">
+  <div class="container">
+    <div class="final__box reveal">
+      <div class="final__copy">
+        <p class="kicker kicker--accent">Diagnóstico gratuito</p>
+        <h2>Descubra quanto seu negócio pode crescer no digital.</h2>
+        <p>Cada negócio é diferente, então preço, prazo e formato de contrato a gente conversa olhando para o seu caso. Preencha em 20 segundos e respondemos pelo WhatsApp para marcar uma conversa de 30 minutos, sem custo e sem compromisso.</p>
+        <ul class="checks">
+          <li>Análise das suas contas e concorrentes</li>
+          <li>Recomendação dos serviços e da verba certos para você</li>
+          <li>Proposta clara de valores e prazos para o seu caso</li>
+          <li>Próximos passos definidos, contratando ou não</li>
+        </ul>
+      </div>
+
+      <form class="form" id="lead-form" novalidate>
+        <div class="field">
+          <label for="f-name">Seu nome</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Como podemos te chamar?" required>
+        </div>
+        <div class="field">
+          <label for="f-contact">WhatsApp ou e-mail</label>
+          <input id="f-contact" name="contact" type="text" autocomplete="tel" placeholder="(11) 90000-0000" required>
+        </div>
+        <div class="field">
+          <label for="f-need">O que você mais precisa agora?</label>
+          <select id="f-need" name="need" required>
+            <option value="" disabled selected>Selecione</option>
+            <option>Mais clientes para meu negócio local</option>
+            <option>Vender mais meu infoproduto</option>
+            <option>Co-produção do meu infoproduto</option>
+            <option>Landing page ou site</option>
+            <option>Começar a anunciar do zero</option>
+            <option>Outro</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn--primary btn--lg btn--block">Solicitar diagnóstico gratuito <span aria-hidden="true">→</span></button>
+        <p class="form__note">Seus dados ficam só com a Spectus. Sem spam.</p>
+        <p class="form__error" role="alert" hidden></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <img src="assets/img/logo-claro.png" alt="Spectus — Estratégia &amp; Performance" width="857" height="200" loading="lazy">
+      <span>© <span id="year">2026</span> Agência Spectus</span>
+    </div>
+    <a href="https://instagram.com/agenciaspectus" target="_blank" rel="noopener">@agenciaspectus</a>
+  </div>
+</footer>
+
+<!-- CTA fixo no mobile -->
+<a href="#contato" class="sticky-cta">Solicitar diagnóstico gratuito</a>
+
+<!-- Lightbox dos prints -->
+<dialog class="lightbox" id="lightbox" aria-label="Print ampliado">
+  <button type="button" class="lightbox__close" aria-label="Fechar">✕</button>
+  <div class="lightbox__imgs"></div>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
