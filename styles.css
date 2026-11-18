@@ -180,7 +180,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .hero__photo-s {
   position: absolute; z-index: -1; width: 88%; left: 50%; top: 5%; transform: translateX(-50%); opacity: .45;
 }
-.hero__photo-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center bottom; }
+.hero__photo-img { position: absolute; left: 0; right: 0; top: 0; bottom: -2px; width: 100%; height: calc(100% + 2px); object-fit: cover; object-position: center bottom; }
 .float-card {
   position: absolute; display: grid; gap: 4px; padding: 14px 18px; border-radius: 16px;
   background: rgba(26,39,80,.88); border: 1px solid var(--line-2);
@@ -615,4 +615,11 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   html { scroll-behavior: auto; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
   .float-card, .dot { animation: none; }
+}
+
+/* ---------- Mobile: etiquetas e títulos de seção centralizados ---------- */
+@media (max-width: 760px) {
+  .section__head { text-align: center; margin-left: auto; margin-right: auto; }
+  .final__copy { text-align: center; }
+  .final__copy .checks { text-align: left; width: fit-content; margin-left: auto; margin-right: auto; }
 }
