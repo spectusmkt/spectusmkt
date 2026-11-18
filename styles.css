@@ -202,8 +202,10 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 .float-card__k { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--dim); font-weight: 700; }
 .float-card__v { font-weight: 700; font-size: 15px; }
-.float-card--a { left: -36px; top: 12%; animation: float 6s ease-in-out infinite; }
-.float-card--b { right: -24px; bottom: 10%; animation: float 7s ease-in-out infinite reverse; }
+.float-card--a { left: -36px; top: -18px; animation: float 6s ease-in-out infinite; }
+.float-card--b { right: -24px; bottom: 10%; max-width: 280px; animation: float 7s ease-in-out infinite reverse; }
+.js-quotes > span { transition: opacity .45s ease, transform .45s ease; }
+.js-quotes.is-swapping > span { opacity: 0; transform: translateY(6px); }
 @keyframes float { 50% { transform: translateY(-10px); } }
 
 @media (max-width: 960px) {

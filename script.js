@@ -29,6 +29,44 @@ const AUD = {
     need: "Vender mais meu infoproduto",
   },
 };
+// Frases que giram no balão da foto do hero (k = quem / v = frase)
+const QUOTES = {
+  local: [
+    { k: "Isa Tacla · estúdio de tatuagem", v: "“A agenda dessa semana está cheia”" },
+    { k: "Larissa Muse · massagista em Dubai", v: "“Tá uma loucura esse telefone”" },
+    { k: "Paulo Braga · cliente Spectus", v: "“Está voltando 3 a 4 vezes mais”" },
+    { k: "Loja de doces · Páscoa", v: "1.020 ovos de Páscoa vendidos" },
+    { k: "Isa Tacla · estúdio de tatuagem", v: "“Tô feliz demais com os resultados”" },
+  ],
+  info: [
+    { k: "Resultado real · infoproduto", v: "R$ 159 mil faturados em 30 dias" },
+    { k: "Resultado real · low ticket", v: "298 vendas em 11 dias" },
+    { k: "Wesley Schroeder · infoprodutor", v: "“Os criativos ficaram top”" },
+    { k: "Cintya Soares · infoprodutora", v: "“Adoro seu trabalho”" },
+  ],
+};
+const quoteCard = document.querySelector(".js-quotes");
+let quoteTimer, quoteIdx = 0;
+function showQuote(q) {
+  quoteCard.querySelector(".float-card__k").textContent = q.k;
+  quoteCard.querySelector(".float-card__v").textContent = q.v;
+}
+function startQuotes(aud) {
+  clearInterval(quoteTimer);
+  const list = QUOTES[aud];
+  quoteIdx = 0;
+  showQuote(list[0]);
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  quoteTimer = setInterval(() => {
+    quoteCard.classList.add("is-swapping");
+    setTimeout(() => {
+      quoteIdx = (quoteIdx + 1) % list.length;
+      showQuote(list[quoteIdx]);
+      quoteCard.classList.remove("is-swapping");
+    }, 450);
+  }, 4200);
+}
+
 const needSelect = document.getElementById("f-need");
 let needTouched = false;
 needSelect.addEventListener("change", () => { needTouched = true; });
@@ -43,6 +81,7 @@ function setAudience(aud, { updateUrl = false } = {}) {
   heroWa.dataset.msg = AUD[aud].wa;
   heroWa.href = waLink(AUD[aud].wa);
   if (!needTouched) needSelect.value = AUD[aud].need;
+  startQuotes(aud);
   if (updateUrl) {
     const url = new URL(location.href);
     url.searchParams.set("para", aud === "info" ? "infoproduto" : "local");
